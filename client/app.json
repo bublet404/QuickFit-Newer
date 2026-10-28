@@ -1,0 +1,30 @@
+
+{
+  "expo": {
+    "name": "QuickFit",
+    "slug": "quickfit",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {},
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "QuickFit needs access to your photos to add clothing pictures.",
+          "cameraPermission": "QuickFit needs camera access to photograph clothing items."
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#f7f4ef"
+        }
+      ],
+      "expo-status-bar"
+    ]
+  }
+}
