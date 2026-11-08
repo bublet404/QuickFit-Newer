@@ -57,5 +57,8 @@ export default function HomeScreen({ navigation }) {
     <View style={{ height: 28 }} />
   </ScrollView></Screen>;
 }
-function Stat({ value, label }) { return <View style={styles.statCard}><Text style={styles.statValue}>{value}</Text><Text style={styles.statLabel}>{label}</Text></View>; }
-function Empty({ text, detail }) { return <View style={styles.empty}><Text style={styles.emptyTitle}>{text}</Text><Text style={styles.emptyDetail}>{detail}</Text></View>; }
+console.log("Error point 1")
+// function Stat({ value, label }) { return <View style={styles.statCard}><Text style={styles.statValue}>{value}</Text><Text style={styles.statLabel}>{label}</Text></View>; }
+// console.log("Error point 2")
+// function Empty({ text, detail }) { return <View style={styles.empty}><Text style={styles.emptyTitle}>{text}</Text><Text style={styles.emptyDetail}>{detail}</Text></View>; }
+// console.log("Error point 3")
