@@ -41,6 +41,7 @@ Open a second terminal in `client/`:
 
 ```bash
 npm install
+cp .env.example .env
 npx expo start
 ```
 
