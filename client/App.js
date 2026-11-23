@@ -55,8 +55,7 @@ export default function App() {
   return (
     <AuthContext.Provider value={{ token, user, signIn, signOut }}>
 <NavigationContainer>
-  {/* If true, bypass login. If false, require authentication. */}
-  {true ? <MainTabs /> : <AuthScreen />}
+  {token ? <MainTabs /> : <AuthScreen />}
 </NavigationContainer>
     </AuthContext.Provider>
   );

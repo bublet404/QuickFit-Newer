@@ -40,7 +40,9 @@ export default function ItemEditorScreen({ route, navigation }) {
     } catch (e) { Alert.alert("Image picker", e.message); }
   }
   async function save() {
+    if (busy) return;
     if (!name.trim()) return Alert.alert("Name required", "Give this clothing item a name.");
+    if (!token) return Alert.alert("Sign in required", "Please log in before saving clothing items.");
     setBusy(true);
     const body = { name: name.trim(), category, color, season, tags: tags.split(",").map(t => t.trim()).filter(Boolean), notes, imageUri };
     try {

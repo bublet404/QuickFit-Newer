@@ -50,9 +50,9 @@ export default function HomeScreen({ navigation }) {
       <Pressable style={styles.actionCard} onPress={() => navigation.navigate("Wardrobe", { screen: "ItemEditor" })}><Text style={styles.actionIcon}>＋</Text><Text style={styles.actionTitle}>Add clothing</Text><Text style={styles.actionSub}>Grow your wardrobe</Text></Pressable>
       <Pressable style={styles.actionCard} onPress={() => navigation.navigate("Outfits", { screen: "OutfitEditor" })}><Text style={styles.actionIcon}>✳</Text><Text style={styles.actionTitle}>Build an outfit</Text><Text style={styles.actionSub}>Mix your pieces</Text></Pressable>
     </View>
-    <View style={styles.sectionHeading}><Text style={styles.h2}>Recently added</Text><Text style={styles.linkText} onPress={() => navigation.navigate("Wardrobe")}>View all</Text></View>
+    <View style={styles.sectionHeading}><Text style={styles.h2}>Recently added</Text><Text style={styles.linkText} onPress={() => navigation.navigate("Wardrobe", { screen: "WardrobeHome" })}>View all</Text></View>
     {items.slice(0, 3).length ? items.slice(0, 3).map(item => <ItemRow key={item._id} item={item} onPress={() => navigation.navigate("Wardrobe", { screen: "ItemEditor", params: { item } })} />) : <Empty text="Your wardrobe is waiting." detail="Add your first clothing item to get started." />}
-    <View style={styles.sectionHeading}><Text style={styles.h2}>Your outfits</Text><Text style={styles.linkText} onPress={() => navigation.navigate("Outfits")}>View all</Text></View>
+    <View style={styles.sectionHeading}><Text style={styles.h2}>Your outfits</Text><Text style={styles.linkText} onPress={() => navigation.navigate("Outfits", { screen: "OutfitsHome" })}>View all</Text></View>
     {outfits.slice(0, 2).length ? outfits.slice(0, 2).map(o => <OutfitRow key={o._id} outfit={o} />) : <Empty text="No outfits saved yet." detail="Create an outfit from the pieces you own." />}
     <View style={{ height: 28 }} />
   </ScrollView></Screen>;
